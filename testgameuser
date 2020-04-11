@@ -29,6 +29,9 @@ mkdir /home/$user/gamefiles
 mkdir /home/$user/gamefiles/rust
 mkdir /home/$user/gamefiles/Steam
 
+#echo 'kundan@77' | echo 'kundan333' | git clone https://github.com/kundan333/rustbash.git
+#cp -ra ~/rustbash /home/$user/
+
 ##copy all initial game files including hidden
 cp -ra /home/gameuser/gamefiles/Steam  /home/$user/gamefiles
 cp -ra /home/gameuser/gamefiles/rust  /home/$user/gamefiles
