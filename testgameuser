@@ -1,0 +1,48 @@
+#!/bin/bash -x
+
+##this is code for user game instance
+
+##1st config the /etc/ssh/sshd_config file
+
+##useradd -m "$1" -p $(openssl passwd -1 "kundan")
+user="$1"
+pass=$2
+useradd $user
+#add user to group
+if [ $(getent group sftpusers) ] 
+then
+:
+else
+groupadd sftpusers
+fi
+
+
+
+usermod -G sftpusers $user
+usermod -s /bin/bash $user
+
+usermod -aG sudo $user
+echo $user"  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/username
+
+mkdir -p /home/$user
+mkdir /home/$user/gamefiles
+mkdir /home/$user/gamefiles/rust
+mkdir /home/$user/gamefiles/Steam
+
+##copy all initial game files including hidden
+cp -ra /home/gameuser/gamefiles/Steam  /home/$user/gamefiles
+cp -ra /home/gameuser/gamefiles/rust  /home/$user/gamefiles
+
+#rm -rf /home/$user/gamefiles/rust/server/*
+##make user owner of all files
+chown -R $user /home/$user/
+##make a group that can run all game instances
+
+
+#change users home directory
+usermod -d /home/$user $user
+echo $user':'$pass | chpasswd
+
+##start server script
+
+

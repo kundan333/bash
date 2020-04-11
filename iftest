@@ -1,0 +1,13 @@
+#!/bin/bash -x
+
+##this is code for user game instance
+
+##1st config the /etc/ssh/sshd_config file
+if [ $(getent group $1) ]
+#if grep -q "^${}:" /etc/group
+then
+echo "group exits"
+else
+echo "group not exits "
+fi
+

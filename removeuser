@@ -1,0 +1,10 @@
+#!/bin/bash -x
+user=$1
+userid="$( id -u $user )"
+pkill -u $userid
+killall -u $user
+userdel -f $user
+
+rm -r /home/$user
+
+
