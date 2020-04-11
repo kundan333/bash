@@ -1,0 +1,7 @@
+#!/bin/bash/
+
+ip=$1
+
+echo '' | ssh-keygen -y
+
+cat ~/.ssh/id_rsa.pub | ssh -i serverkey.pub gameuser@ip 'cat >> ~/.ssh/authorized_keys && echo "key copied" '

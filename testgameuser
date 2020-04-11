@@ -9,16 +9,16 @@ user="$1"
 pass=$2
 useradd $user
 #add user to group
-if [ $(getent group sftpusers) ] 
-then
-:
-else
-groupadd sftpusers
-fi
+#if [ $(getent group sftpusers) ] 
+#then
+#:
+#else
+#groupadd sftpusers
+#fi
 
 
 
-usermod -G sftpusers $user
+#usermod -G sftpusers $user
 usermod -s /bin/bash $user
 
 usermod -aG sudo $user
@@ -28,6 +28,7 @@ mkdir -p /home/$user
 mkdir /home/$user/gamefiles
 mkdir /home/$user/gamefiles/rust
 mkdir /home/$user/gamefiles/Steam
+
 
 #echo 'kundan@77' | echo 'kundan333' | git clone https://github.com/kundan333/rustbash.git
 #cp -ra ~/rustbash /home/$user/
@@ -47,5 +48,7 @@ usermod -d /home/$user $user
 echo $user':'$pass | chpasswd
 
 ##start server script
+
+
 
 
