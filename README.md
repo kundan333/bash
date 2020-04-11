@@ -1,0 +1,2 @@
+# rustbash
+bash script
