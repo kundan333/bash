@@ -7,6 +7,6 @@ rpass=$4
 players=$5
 seed=$6
 dir=/home/$user/gamefiles/rust
-
+sudo chown -R $user $dir
 sudo su -s /bin/bash -c "$DIR/startrust.sh $dir $user $gport $rcon $rpass $players $seed > ~/gamefiles/runop 2>&1 > /dev/null &" $user
 

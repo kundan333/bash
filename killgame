@@ -1,4 +1,4 @@
 #!/bin/bash
 user=$1
-su -s /bin/bash -c "$(killall -9 RustDedicated)" $user
+su -s /bin/bash -c "killall -9 RustDedicated" $user
 ##or user sudo pkill -TERM RustDedicated
