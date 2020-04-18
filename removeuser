@@ -1,9 +1,9 @@
 #!/bin/bash -x
 user=$1
 userid="$( id -u $user )"
-pkill -u $userid
-killall -u $user
-userdel -f $user
+sudo pkill -u $userid
+sudo killall -u $user
+sudo userdel -f $user
 
 rm -r /home/$user
 

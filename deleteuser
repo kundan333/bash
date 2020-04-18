@@ -1,4 +1,10 @@
 #!/bin/bash
 
 user=$1
+
+userid="$( id -u $user )"
+sudo pkill -u $userid
+sudo killall -u $user
+
+
 sudo deluser --remove-all-files $user
