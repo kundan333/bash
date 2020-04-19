@@ -1,0 +1,27 @@
+#!/bin/bash
+
+user=$1
+dir=/home/$user/gamefiles
+while IFS= read -r line
+do
+
+if [ -f $dir/.killed ]
+then
+echo "in killed state"
+	if [ -f $dir/.online  ]
+	then
+	rm $dir/.online
+	fi
+break
+else
+#echo $line
+if [[ $line = "Server startup complete" ]]
+then
+echo "online"
+touch $dir/.online
+fi
+fi
+
+done < $dir/.gopt
+
+
