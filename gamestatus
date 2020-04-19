@@ -2,6 +2,10 @@
 
 user=$1
 dir=/home/$user/gamefiles
+
+if [ -f $dir/.gopt  ]
+then
+
 while IFS= read -r line
 do
 
@@ -24,4 +28,9 @@ fi
 
 done < $dir/.gopt
 
+else
+echo".gopt does not exits "
+fi
+
+## if .gopt does not exits
 
