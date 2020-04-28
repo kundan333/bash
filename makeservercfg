@@ -1,0 +1,9 @@
+#!/bin/bash
+
+text=$1
+user=$2
+dir=/home/$user/gamefiles/rust/server/my_server_identity/cfg
+
+sudo touch $dir/server.cfg
+sudo chown -R $user $dir
+sudo echo -e $text > server.cfg

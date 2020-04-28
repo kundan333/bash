@@ -11,7 +11,7 @@ do
 
 if [ -f $dir/.killed ]
 then
-echo "in killed state"
+echo "killed"
 	if [ -f $dir/.online  ]
 	then
 	rm $dir/.online
