@@ -6,7 +6,9 @@ rcon=$3
 rpass=$4
 players=$5
 seed=$6
+hostname=$7
+map_name=$8
 dir=/home/$user/gamefiles/rust
 sudo chown -R $user $dir
-sudo su -s /bin/bash -c "$DIR/startrust.sh $dir $user $gport $rcon $rpass $players $seed > ~/gamefiles/.runopt 2>&1 > /dev/null &" $user
+sudo su -s /bin/bash -c "$DIR/startrust.sh $dir $user $gport $rcon $rpass $players $seed $hostname $map_name > ~/gamefiles/.runopt 2>&1 > /dev/null &" $user
 
