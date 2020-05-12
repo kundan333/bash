@@ -1,0 +1,18 @@
+#!/bin/bash -x
+
+
+if [ -d "/home/gameuser/gamefiles/rust" ]
+then
+
+echo "ok continue"
+
+else
+
+mkdir "/home/gameuser/gamefiles/rust" 
+
+fi
+
+/home/gameuser/Steam/steamcmd.sh +login anonymous +force_install_dir /home/gameuser/rust +app_update 258550 +quit
+
+
+sudo chown -R gameuser "/home/gameuser/gamefiles/rust"
