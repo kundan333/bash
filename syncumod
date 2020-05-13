@@ -16,3 +16,5 @@ fi
 sudo rsync -av "/home/gameuser/RustDedicated_Data/" "/home/"$1"/gamefiles/rust/RustDedicated_Data/"
 
 chown -R $1 "/home/"$1"/gamefiles/rust"
+
+#permission to execute
