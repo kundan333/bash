@@ -13,6 +13,6 @@ echo "umod does not exits in gameuser directory"
 
 fi
 
-sudo rsync -avu  "/home/gameuser/RustDedicated_Data/" "/home/"$1"/gamefiles/rust/RustDedicated_Data/"
+sudo rsync -av "/home/gameuser/RustDedicated_Data/" "/home/"$1"/gamefiles/rust/RustDedicated_Data/"
 
 chown -R $1 "/home/"$1"/gamefiles/rust"
