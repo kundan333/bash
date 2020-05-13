@@ -9,7 +9,7 @@ echo "ok continue"
 
 else
 
-mkdir "/home/"$1"/gamefiles/rust" ;
+mkdir "/home/"$1"/gamefiles/rust" 
 
 fi
 

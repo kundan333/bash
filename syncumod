@@ -1,0 +1,18 @@
+#!/bin/bash -x
+user=$1
+
+##check for directories
+if [ -d "/home/gameuser/RustDedicated_Data/" ]
+then
+
+echo "ok continue"
+
+else
+
+echo "umod does not exits in gameuser directory" 
+
+fi
+
+sudo rsync -avu  "/home/gameuser/RustDedicated_Data/" "/home/"$1"/gamefiles/rust/RustDedicated_Data/"
+
+chown -R $1 "/home/"$1"/gamefiles/rust"
