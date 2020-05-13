@@ -1,0 +1,18 @@
+#!/bin/bash -x
+user=$1
+
+##check for directories
+if [ -d "/home/"$1"/gamefiles/rust" ]
+then
+
+echo "ok continue"
+
+else
+
+mkdir "/home/"$1"/gamefiles/rust" ;
+
+fi
+
+sudo rsync -avu --exclude "server/*"  "/home/gameuser/gamefiles/rust/" "/home/"$1"/gamefiles/rust/"
+
+chown -R $1 "/home/"$1"/gamefiles/rust"
