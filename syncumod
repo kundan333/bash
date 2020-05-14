@@ -7,14 +7,16 @@ then
 
 echo "ok continue"
 
+
+sudo rsync -av "/home/gameuser/RustDedicated_Data/" "/home/"$user"/gamefiles/rust/RustDedicated_Data/"
+
+sudo chown -R $user "/home/"$user"/gamefiles/rust"
+
 else
 
 echo "umod does not exits in gameuser directory" 
 
 fi
 
-sudo rsync -av "/home/gameuser/RustDedicated_Data/" "/home/"$1"/gamefiles/rust/RustDedicated_Data/"
-
-sudo chown -R $1 "/home/"$1"/gamefiles/rust"
 
 #permission to execute
