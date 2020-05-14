@@ -1,0 +1,22 @@
+#!/bin/bash -x
+user=$1
+modname=$2
+
+##check for directories
+if [ -f "/home/"$user"/gamefiles/rust/oxide/plugins/"$modname"" ]
+then
+
+echo "ok continue"
+
+sudo rm "/home/"$user"/gamefiles/rust/oxide/plugins/"$modname""
+#wget in plugin directory
+#  wget https://umod.org/plugins/NTeleportation.cs -P ~/test/
+# sudo wget -N $modurl -P "/home/"$user"/gamefiles/rust/oxide/plugins/"
+
+# sudo chown -R $user "/home/"$user"/gamefiles/rust/oxide"
+
+else
+
+echo "mod does not exits in "$user" directory" 
+
+fi

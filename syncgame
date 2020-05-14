@@ -15,4 +15,4 @@ fi
 
 sudo rsync -avu --exclude "server/*"  "/home/gameuser/gamefiles/rust/" "/home/"$1"/gamefiles/rust/"
 
-chown -R $1 "/home/"$1"/gamefiles/rust"
+sudo chown -R $1 "/home/"$1"/gamefiles/rust"
