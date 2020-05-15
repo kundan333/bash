@@ -1,0 +1,23 @@
+#!/bin/bash
+
+user=$1
+
+
+##check for directories
+if [ -f "/home/"$user"/gamefiles/rust/server/my_server_identity/cfg/server.cfg" ]
+then
+
+echo "ok continue"
+
+else
+
+sudo touch /home/"$user"/gamefiles/rust/server/my_server_identity/cfg/server.cfg
+
+fi
+
+
+text=$2
+
+sudo echo -e $text > server.cfg
+
+sudo chown -R server5024 server.cfg
