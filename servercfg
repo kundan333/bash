@@ -18,6 +18,6 @@ fi
 
 text=$2
 
-sudo echo -e $text > server.cfg
+sudo echo -e $text > /home/"$user"/gamefiles/rust/server/my_server_identity/cfg/server.cfg
 
-sudo chown -R server5024 server.cfg
+sudo chown -R server5024 /home/"$user"/gamefiles/rust/server/my_server_identity/cfg/server.cfg
