@@ -2,5 +2,7 @@
 
 user=$1
 
+if [ -f /home/"$user"/gamefiles/.killed  ]
+then
 sudo rm /home/"$user"/gamefiles/.killed
-
+fi
