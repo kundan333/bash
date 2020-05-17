@@ -2,7 +2,7 @@
 
 url=$1
 
-wget -N /home/gameuser/$url
+wget -N $url -P "/home/gameuser/"
 
 unzip -o /home/gameuser/Oxide.Rust-linux.zip
 
