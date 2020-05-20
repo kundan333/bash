@@ -1,0 +1,9 @@
+#!/bin/bash
+user=$1
+
+if [ -d /home/"$user"/gamefiles/rust/server/my_server_identity/ ]
+then
+
+echo "$(ls /home/"$user"/gamefiles/rust/server/my_server_identity)"
+
+fi
