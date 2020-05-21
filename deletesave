@@ -1,0 +1,17 @@
+#!/bin/bash -x
+
+#~/test/baz.sh "$@"
+
+user=$1
+
+for ARG in "$@"; do
+
+if [ "$ARG" != "$user" ]
+then
+
+sudo rm /home/"$user"/gamefiles/rust/server/my_server_identity/$ARG
+echo "deteted : $ARG"
+
+fi
+
+done
