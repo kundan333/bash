@@ -10,6 +10,9 @@ sudo rm -r /home/"$user"/gamefiles/rust/server/my_server_identity
 
 sudo cp -r /home/gameuser/backups/"$user"/"$file"/my_server_identity /home/"$user"/gamefiles/rust/server/
 
-else
+##permission
+sudo chown -R $user /home/"$user"/gamefiles/rust/server/my_server_identity
 
+else
+echo "backup not exits"
 fi

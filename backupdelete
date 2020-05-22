@@ -1,0 +1,14 @@
+#!/bin/bash
+
+user=$1
+file=$2
+
+if [ -d /home/gameuser/backups/"$user"/"$file"/my_server_identity ]
+then
+sudo rm -r /home/gameuser/backups/"$user"/"$file"
+echo "backup files removed"
+else
+echo "backup files does not exits"
+fi
+
+
