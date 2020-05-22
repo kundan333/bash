@@ -1,0 +1,15 @@
+#!/bin/bash
+
+user=$1
+file=$2
+
+if [ -d /home/gameuser/backups/"$user"/"$file"/my_server_identity ]
+then
+
+sudo rm -r /home/"$user"/gamefiles/rust/server/my_server_identity
+
+sudo cp -r /home/gameuser/backups/"$user"/"$file"/my_server_identity /home/"$user"/gamefiles/rust/server/
+
+else
+
+fi

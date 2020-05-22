@@ -1,0 +1,24 @@
+#!/bin/bash
+
+user=$1
+file=$2
+
+mkdirf () {
+
+dir=$1
+
+if [ -d $dir ]
+then
+echo "$dir already exits"
+else
+mkdir $dir
+echo "$dir created"
+fi
+
+}
+
+mkdirf "/home/gameuser/backups"
+mkdirf "/home/gameuser/backups/"$user""
+mkdirf "/home/gameuser/backups/"$user"/"$file""
+
+sudo cp -r /home/"$user"/gamefiles/rust/server/my_server_identity /home/gameuser/backups/"$user"/"$file"/
