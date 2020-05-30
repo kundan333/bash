@@ -8,3 +8,5 @@ sudo killall -u $user
 
 
 sudo deluser --remove-all-files $user
+
+sudo rm -r /home/gameuser/backups/$user

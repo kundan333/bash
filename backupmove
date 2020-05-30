@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 user=$1
 file=$2
