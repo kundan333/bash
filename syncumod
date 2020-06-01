@@ -4,6 +4,16 @@ user=$1
 ##check for directories
 if [ -d "/home/gameuser/RustDedicated_Data/" ]
 then
+echo " umod dir exits in gameuser continue"
+
+else
+
+sudo /home/gameuser/bash/umodupdate
+
+fi
+
+if [ -d "/home/gameuser/RustDedicated_Data/" ]
+then
 
 echo "ok continue"
 

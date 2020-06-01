@@ -2,6 +2,13 @@
 user=$1
 modurl=$2
 
+if [ -d "/home/gameuser/RustDedicated_Data/" ]
+then
+echo " umod dir exits in gameuser continue" 
+else
+##sudo /home/gameuser/bash/syncumod $user
+echo "download umod 1st"
+fi
 ##check for directories
 if [ -d "/home/"$user"/gamefiles/rust/oxide/plugins/" ]
 then

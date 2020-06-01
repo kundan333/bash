@@ -3,7 +3,7 @@
 url=$1
 
 wget -N $url -P "/home/gameuser/"
-
+#install unzip first
 unzip -o /home/gameuser/Oxide.Rust-linux.zip
 
 sudo chown -R gameuser "/home/gameuser/RustDedicated_Data" 
